@@ -1,6 +1,6 @@
 resource "aws_elastic_beanstalk_application" "app" {
-  name        = "incredible-website"
-  description = "Application for the incredible website."
+  name        = "ebtf"
+  description = "ebtf demo."
 }
 
 resource "aws_elastic_beanstalk_environment" "production" {
