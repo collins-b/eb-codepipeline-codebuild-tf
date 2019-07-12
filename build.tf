@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "artifacts" {
-  bucket = "qtpebtf-log7890"
+  bucket = "${var.bucket_profile}"
   acl    = "private"
   region     = "${var.region}"
 }

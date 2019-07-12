@@ -1,0 +1,11 @@
+access_key = ""
+secret_key = ""
+
+github_organization = ""
+github_repository = ""
+github_branch = ""
+github_token = ""
+region = ""
+
+bucket_role = ""
+bucket_profile = ""
