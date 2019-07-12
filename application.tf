@@ -6,7 +6,7 @@ resource "aws_elastic_beanstalk_application" "app" {
 resource "aws_elastic_beanstalk_environment" "production" {
   name                = "production"
   application         = "${aws_elastic_beanstalk_application.app.name}"
-  solution_stack_name = "64bit Amazon Linux 2018.03 v4.5.1 running Node.js"
+  solution_stack_name = "64bit Amazon Linux 2018.03 v4.9.2 running Node.js"
 
   setting {
     namespace = "aws:elbv2:listener:80"

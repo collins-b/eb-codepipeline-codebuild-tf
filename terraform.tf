@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "tf-eb-artifacts-bucket"
-    key    = "ebtf/terraform.tfstate"
-    region = "us-east-2"
+    bucket = "ebtf-state"
+    key    = "terraform.tfstate"
+    region = "us-east-1"
   }
 }
 
