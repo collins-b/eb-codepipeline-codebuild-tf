@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Installing dependencies...
+      - npm install
+  build:
+    commands:
+      - echo Building files
+      - npm run build
+  post_build:
+    commands:
+      - echo Running tests
+      - npm test
+artifacts:
+  files:
+    - '**/*'
+  base-directory: '.'
+  discard-paths: no 
