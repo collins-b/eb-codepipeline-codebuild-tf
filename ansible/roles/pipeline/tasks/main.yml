@@ -1,0 +1,21 @@
+---
+- name: Create Cluster
+  shell: eksctl create cluster -f files/cluster/cluster.yml
+  args:
+    executable: /bin/bash
+
+- name: Provisiion codebuild permission
+  script: files/scripts/k8s-cluster.sh
+
+- name: create a cloudformation stack
+  cloudformation:
+    stack_name: "ci-cd-eks"
+    state: "present"
+    region: "us-east-1"
+    disable_rollback: true
+    template: files/cloudformation/eks-pipeline.yml
+    template_format: yaml
+    template_parameters:
+      GitHubToken: "{{ githubtoken }}"
+    tags:
+      Stack: "ci-cd-eks"
