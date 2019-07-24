@@ -1,0 +1,4 @@
+- name: Delete Cluster
+  shell: eksctl delete cluster -f files/cluster/cluster.yml
+  args:
+    executable: /bin/bash
